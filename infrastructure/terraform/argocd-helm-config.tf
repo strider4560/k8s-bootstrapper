@@ -7,11 +7,4 @@ resource "helm_release" "argocd" {
   version          = var.argocd_helm_chart_version
   timeout          = var.argocd_helm_chart_timeout_seconds
   create_namespace = true
-
-
-  # Additional Helm values
-  # Enable if you want to install high-availability argocd
-  # values = [
-  #   file(var.argocd_additional_helm_values_file)
-  # ]
 }

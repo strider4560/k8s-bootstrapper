@@ -1,3 +1,4 @@
 bots:
   enable: false
-domain: 
+domain: ""
+admin_email: ""

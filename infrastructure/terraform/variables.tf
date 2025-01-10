@@ -4,22 +4,25 @@ variable "do_token" {
 }
 
 # ===================== DOKS CONFIG VARS =======================
-
 variable "doks_cluster_name_prefix" {
   type        = string
-  default     = "k8s-bootstrapper"
   description = "DOKS cluster name prefix value (a random suffix is appended automatically)"
+}
+
+variable "doks_cluster_admin_email" {
+  type        = string
+  description = "DOKS cluster admin email"
 }
 
 variable "doks_k8s_version" {
   type        = string
-  default     = "1.29.1-do.0"
+  default     = "1.31"
   description = "DOKS Kubernetes version"
 }
 
 variable "doks_cluster_region" {
   type        = string
-  default     = "ams3"
+  default     = "sfo3"
   description = "DOKS region name"
 }
 
@@ -137,6 +140,7 @@ variable "argocd_helm_chart_version" {
   default     = "6.5.0"
   description = "ArgoCD Helm chart version to deploy"
 }
+
 variable "argocd_helm_chart_timeout_seconds" {
   type        = number
   default     = 300
